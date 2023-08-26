@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(" 1.Write a function which can return the sum of two numbers.")
+        function add(a,b)
+        {
+            var z=a+b;
+            return z;
+        }
+        var sum=add(45,67)
+        console.log(sum)
+        console.log("Write a function which can return the greatest of the three numbers passed in arguments.")
+        function compare(a,b,c)
+        {
+            if(a>b) {
+                 return(a)
+            } 
+            if(b>c){
+                return(b)
+            } 
+            if(c<a){
+                return(c)
+            } 
+        }
+        var sum=compare(45,67,23);
+        console.log(sum)
+        console.log("Write a function which can print the given arguments in ascending order.")
+        function nums(a,b,c)
+        {
+            if(a>c){
+             console.log(c)
+            }
+            else{
+                console.log(b)
+            }
+            if(b<c){
+                console.log(a)
+            }
+            else{
+                console.log(a)
+            }
+            if(c<a)
+             return(c)
+            else{
+                return(c)
+            
+            }
+        
+        }
+        var x=nums(43,7,68)
+        console.log(x)
+        console.log("Write a function which can return the factorial of a number.")
+        function fac(a){
+            f=1;
+        for( var i=a;i>=1;i--){
+            f=f*i;
+        }
+        return f;
+          }
+        var factorial=fac(4);
+        console.log(factorial)
+        console.log('Write a function which can to return the reverse of a given number.')
+          function rev(a){
+            var r=0
+            for( var i=a;i>0;i--){
+                console.log(i)
+            }
+            return r;
+          }
+          var res=rev(4);
+          console.log(res)
+          console.log("Write a function which can check a given number is prime number or not")
+          function prime(a) {
+            var i=a
+            if(i%2==0){
+                console.log("the number is a prime num")
+            }
+            else{
+                console.log("the number is a prime num")
+            }
+            return a
+          }
+          var y =prime(7)
+          console.log(y)
+          console.log("Write a function which can check a given number is palindrome or not")
+        console.log("Write a function that prints all even numbers between 1 and 20.")
+
+
+        function even() { 
+         for( var i=0;i<=20;i++){            
+            if(i%2===0){
+                console.log(i)            
+            }
+         }
+        }
+        even()
+    
+        
+    </script>
+</body>
+</html>

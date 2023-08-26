@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <script>
+        var person = {
+                     firstName : "Harry",
+                     lastName : "Potter",
+                      age: 30,
+                      gender: "male",
+                      skill : "ReactJS",
+                     expertise: "Beginner"
+                     };
+                     console.log(person.firstName);
+                     console.log(person.lastName);
+                     console.log(person.firstName+' '+person.lastName)
+                     var person
+                      if(person.age>18){
+                     console.log("false")
+                      }
+                      else{
+                console.log("ture")
+               }
+             if(person.age18<18){
+                console.log("flase")
+            }
+            else{
+                console.log("ture")
+            }
+            console.log("For the given marks object solve the following")
+            var marks = {
+                         maths: 34,
+                         english: 56,
+                         science: 32,
+                        hindi: 75,
+                        socialscience: 65
+                     };
+                     console.log("Print the names of all the subjects from the given object.")
+                     for(var x in marks){
+                        console.log(x)
+                     }
+                     console.log("Print the marks of all the subjects")
+                     for(var y in marks){
+                        console.log( marks[y])
+                     }
+                     console.log("Count the number of subjects from the given object.")
+                     var count=0
+                     for(var x in marks){
+                        count++
+                     }
+                      console.log(count)
+                     console.log("Print the percentage of the marks of the student.")
+                     var totalmarks=0
+                     var percentage
+                     for(var x in marks){
+                        totalmarks=totalmarks+marks[x]
+                     }
+                     percentage=(totalmarks/5)
+                     console.log(percentage)
+                    
+                    console.log("Print only those subjects where the student scored more than 35.")
+                    for(var x in marks){
+                        if(marks[x]>35){
+                            console.log(x,marks[x])
+                        }
+                    }
+                    console.log("Print the pass/fail status of the subjects provided 35 is the pass mark")
+                    for(var x in marks){
+                        if(marks[x]>35){
+                            console.log("pass")
+                        }
+                        else
+                        if(marks[x]<35){
+                            console.log("fali")
+                        }
+                    }
+                    console.log("Print only the passed subjects.")
+                    for(var x in marks){
+                        if(marks[x]>35)
+                        console.log(x)
+                    }
+                    console.log("Print only the failed subjects.")
+                    for(var x in marks){
+                        if(marks[x]<35){
+                            console.log(x)
+                        }
+                    }
+                    console.log("Count the number of passed subjects.")
+                          count=0
+                    for(var x in marks){
+                        if(marks[x]>35){
+                            count++ 
+                        }
+                    }
+                
+                    console.log(count)
+                    console.log("Count the number of failed subjects")
+                    count=0
+                    for(var x in marks){
+                        if(marks[x]<35){
+                            count++
+                        }
+                    }
+                    console.log(count)
+                    console.log("Print the least scored subject.")
+                    var min=+Infinity
+                    for(var x in marks)
+                    {
+                        if(min> marks[x])
+                        {
+                            min=marks[x]
+                        }  
+                        console.log(marks[x])
+                        console.log(x)
+                    }
+                       console.log(min)
+                       console.log("Print the highest scored subject ")
+                       var max=-Infinity
+                       for(var x in marks){
+                        if(max<marks[x]){
+                            max=marks[x]
+                        }
+                       }
+                        console.log(max)
+                                             
+   </script>
+   </head>
+</body>
+</html>

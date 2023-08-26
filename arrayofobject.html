@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             var products = [
+                            {
+                                "name": "Duracell - AAA Batteries (4-Pack)",
+                                "type": "HardGood",
+                                "price": 5.49,
+                                "category": "Household Batteries",
+                                "manufacturer": "Duracell",				
+                            },
+                            {
+                                "name": "Hard Rock TrackPak - Mac",
+                                "type": "Software",
+                                "price": 29.99,
+                                "category": "Recording Equipment",
+                                "manufacturer": "Hal Leonard",				
+                            },
+                            {
+                                "name": "Duracell - AA 1.5V CopperTop Batteries (4-Pack)",
+                                "type": "HardGood",
+                                "price": 5.62,
+                                "category": "Household Batteries",
+                                "manufacturer": "Duracell",				
+                            },
+                            {
+                                "name": "Energizer - MAX Batteries AA (4-Pack)",
+                                "type": "HardGood",
+                                "price": 5.32,
+                                "category": "Household Batteries",
+                                "manufacturer": "Energizer",				
+                            },
+                            {
+                                "name": "METRA - Antenna Cable Adapter - Black",
+                                "type": "HardGood",
+                                "price": 13.99,
+                                "category": "Antennas & Adapters",
+                                "manufacturer": "Metra",				
+                            },
+                            {
+                               "name": "WipeDrive Six - Mac|Windows",
+                                "type": "Software",
+                                "price": 23.99,
+                                "category": "Maintenance Software",
+                                "manufacturer": "White Canyon",				
+                            }
+                        ];
+                        console.log("Print all the product names.")
+                        for(var i=0;i<=products.length-1;i++){
+                            console.log(products[i].name)
+                        }
+                        console.log("Print all the HardGood.")
+                        var a= products.filter(function(x,i) {
+                           return (x.type==="HardGood")
+                        })
+                        console.log(a)
+                        //Print all the softwares.
+                        var b=products.filter(function(x,i) {
+                            return(x.type==="Software")
+                            
+                        })
+                        console.log(b)
+                        //Print all the categories.
+                        var c=products.filter(function(x,i) {
+                            return("category")
+                        })
+                        console.log(c)
+                        console.log("Print only the products manufactured by Duracell.")
+                        var e=products.filter(function(x,i) {
+                            return(x.manufacturer=== "Duracell")
+                        })
+                        console.log(e)
+                        console.log("Print the product names in ascending order of their prices.")
+                        var n=products.sort(function (x,y) {
+                            if(x.price>y.price){
+                                return -1
+                            }
+                            else{
+                                return 1
+                            }
+                            return 0;
+                        })
+                        console.log(n)
+                        //Print only those products whose price is more than 14.99.
+                        var s=products.filter(function(x,i) {
+                            return(x.price>=14.99)
+                            
+                        })
+                        console.log(s)
+                        //Print only those products whose price is less than 9.99.
+                        var aa=products.filter(function(x,i) {
+                            return(x.price<9.99)
+                        })
+                        console.log(aa)
+                        console.log("Print the total price of all the hardgoods.")
+                        var a=products.filter(function(s,i) {
+                            return(s.type==="HardGood")
+                        })
+                        var c=a.reduce(function(a,b) {
+                            return(a+b.price)
+                        },0)
+                        console.log(c)
+                
+                         var people=[{
+                            "firstname": "praveen",
+                            "lastname": "gubbala",
+                            "age": 36,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 10000
+                            },
+                            {
+                            "firstname": "srikanth",
+                            "lastname": "gubbala",
+                            "age": 32,
+                            "gender": "male",
+                            "city": "bengaluru",
+                            "salary": 20000
+                            },
+                            {
+                            "firstname": "pradeep",
+                            "lastname": "reddy",
+                            "age": 21,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 25000
+                            },
+                            {
+                            "firstname": "mounika",
+                            "lastname": "mudiraj",
+                            "age": 20,
+                            "gender": "female",
+                            "city": "nalgonda",
+                            "salary": 30000
+                            },
+                            {
+                            "firstname": "nikhil",
+                            "lastname": "m",
+                            "age": 22,
+                            "gender": "male",
+                            "city": "guntur",
+                            "salary": 2000
+                            },
+                            {
+                            "firstname": "riya",
+                            "lastname": "bhadouria",
+                            "age": 14,
+                            "gender": "female",
+                            "city": "indore",
+                            "salary": 40000
+                            }];
+                        
+                            //Print all the firstnames.
+                            console.log("Print all the firstnames.")
+                            people.forEach(function(x){
+                                console.log(x.firstname)
+                            })
+                            console.log("Print all the full names.")
+                            people.forEach(function(x){
+                                console.log(x.firstname+""+x.lastname )
+                            })
+                            console.log("Print only those names whose age is more than 25.")
+                             var res= people.filter(function(people){
+                                if(people.age>25){
+                                    return true
+                                }
+                                else{
+                                    return false
+                                }
+                            
+                            })
+                            console.log(res)
+                            console.log("Print all female names.")
+                             var res= people.filter(function(x){
+                                if(x.gender==="female"){
+                                    return true
+                                }
+                                else{
+                                    return false
+                                }
+                            })
+                            console.log(res)
+                            console.log("Print all the firstnames whose salary is more than 25000.")
+                            var ac=people.filter(function(x){
+                                    if(x.salary>25000){
+                                        return true
+                                    }
+                                    else{
+                                        return false
+                                    }
+                            })
+                            console.log(ac)
+                          /*  console.log("Print the total salary of all the people.")
+                            var x=people.reduce(function(a,b) {
+                        
+                                    return(a+b.salary)
+                                
+                            },0)
+                            console.log(x)*/
+                           /*console.log("Print all the fullnames in the alphabetical order.")
+                            var xr=people.sort(function(x,y) {
+                                if(x.firstname+""+x.lastname>y.firstname+""+y.lastname){
+                                    return 1
+                                }
+                                else
+                                {
+                                    return -1
+                                }
+                                 return 0;
+                            
+
+                            })
+                            console.log(xr)*/
+                            /*console.log("Print all the fullnames in the increasing order of their age.")
+                            var res=people.sort(function(x,y) {
+                                if(x>y.age){
+                                    return -1
+                                }
+                                else{
+                                    return 1
+                                }
+                            })
+                            console.log(res)*/
+                          /*  console.log("Print all the fullnames in the reverse alphabetical order.")
+                            var a=people.sort(function (a,b) {
+                                if(a.firstname<b.firstname){
+                                    return 1
+                                }
+                                else{
+                                    return-1
+                                }
+                                return 0;
+                            })
+                            console.log(a)*/
+                            /*console.log("Print all the fullnames in the decreasing order of their salaries.")
+                            var sa=people.sort(function(a,b) {
+                                if(a.salary<b.salary){
+                                    return 1
+                                }
+                                else{
+                                    return -1
+                                }
+                                
+                            })
+                            console.log(sa)*/
+                           /* console.log("Using prompt, print only those names whose city is hyd.")
+                             var a=prompt()
+                             var b=people.filter(function(z,y) {
+                                if(z.city===a){
+                                return true;
+                                }
+                                else{
+                                    return false;
+                                }
+                             })
+                              console.log(b)*/
+                              console.log("Using prompt, print all names whose city is .")
+                              var br=[]
+                              for(i=0;i<=people.length-1;i++){
+                                if(!br.includes(people[i]. city)){
+                                    br.push(people[i].city)
+                                }
+                              }
+                              console.log(br)
+                              
+                             var y=  people.filter(function(x,i) {
+                                return x.firstname.startsWith("p")
+
+                              })
+                              console.log(y)
+                              y.forEach(function(p,i) {
+                                console.log(p.firstname.toUpperCase()+" "+p.lastname)
+                              })
+                              var a="apple"
+                              var obj={}
+                              for(i=0;i<=a.length-1;i++){
+
+                                obj[a[i]]=1
+                              }
+                              console.log(obj)
+                              var s="vamsi"
+                              var obj={}
+                              console.log(obj["s"])
+
+                            
+
+    </script>
+</body>
+</html>
